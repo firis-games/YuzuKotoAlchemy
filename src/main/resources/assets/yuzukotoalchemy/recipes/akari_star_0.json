@@ -1,0 +1,20 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"yxy",
+		"xyx",
+		"yxy"
+	],
+	"key": {
+		"x": {
+			"item": "minecraft:nether_star"
+		},
+		"y": {
+			"item": "projecte:item.pe_klein_star",
+			"data": 5
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:akari_star"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"xxx",
+		"xyx",
+		"xxx"
+	],
+	"key": {
+		"x": {
+			"item": "yuzukotoalchemy:circle_structure",
+			"data": 1
+		},
+		"y": {
+			"item": "yuzukotoalchemy:akari_star"
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:circle_structure",
+		"data": 2
+	}
+}

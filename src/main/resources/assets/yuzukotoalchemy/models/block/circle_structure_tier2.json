@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "yuzukotoalchemy:blocks/circle_structure_tier2"
+    }
+}

@@ -1,0 +1,17 @@
+itemGroup.tabYuzuKotoAlchemy=ゆづことアルケミー
+
+tile.yuzukoto_catalyst.name=ゆづことカタリスト
+
+tile.circle_structure_tier1.name=茜式EMCストラクチャ
+tile.circle_structure_tier2.name=葵式EMCストラクチャ
+tile.circle_structure_tier3.name=ゆかり式EMCストラクチャ
+
+tile.emc_generator_mk1.name=EMCジェネレータMk1
+tile.emc_generator_mk2.name=EMCジェネレータMk2
+tile.emc_generator_mk3.name=EMCジェネレータMk3
+
+item.akari_star.name=あかりスター
+
+tooltip.emc.maximum_generation=Maximum Generation Rate:
+tooltip.emc.generation=Circle Generation Rate:
+tooltip.emc.rate=EMC/s

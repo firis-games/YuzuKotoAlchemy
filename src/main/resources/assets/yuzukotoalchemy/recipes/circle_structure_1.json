@@ -1,0 +1,22 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"xxx",
+		"xyx",
+		"xxx"
+	],
+	"key": {
+		"x": {
+			"item": "yuzukotoalchemy:circle_structure",
+			"data": 0
+		},
+		"y": {
+			"item": "projecte:item.pe_klein_star",
+			"data": 5
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:circle_structure",
+		"data": 1
+	}
+}

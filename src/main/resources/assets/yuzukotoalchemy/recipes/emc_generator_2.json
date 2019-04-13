@@ -1,0 +1,23 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"xyx",
+		"xzx",
+		"xyx"
+	],
+	"key": {
+		"x": {
+			"item": "minecraft:glowstone"
+		},
+		"y": {
+			"item": "projecte:collector_mk3"
+		},
+		"z": {
+			"item": "projecte:item.pe_matter",
+			"data": 1
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:emc_generator_mk3"
+	}
+}

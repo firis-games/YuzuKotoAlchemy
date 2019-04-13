@@ -1,0 +1,22 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"yxy",
+		"xyx",
+		"yxy"
+	],
+	"key": {
+		"y": {
+			"item": "projecte:matter_block",
+			"data": 1
+		},
+		"x": {
+			"item": "projecte:fuel_block",
+			"data": 2
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:circle_structure",
+		"data": 0
+	}
+}

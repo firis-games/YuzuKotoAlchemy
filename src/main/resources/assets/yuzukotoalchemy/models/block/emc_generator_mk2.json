@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "yuzukotoalchemy:blocks/emc_generator",
+        "down": "yuzukotoalchemy:blocks/emc_generator_mk2",
+        "up": "yuzukotoalchemy:blocks/emc_generator_mk2",
+        "north": "yuzukotoalchemy:blocks/emc_generator",
+        "east": "yuzukotoalchemy:blocks/emc_generator",
+        "south": "yuzukotoalchemy:blocks/emc_generator",
+        "west": "yuzukotoalchemy:blocks/emc_generator"
+    }
+}

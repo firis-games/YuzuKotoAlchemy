@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "active=off,tier=tier1": { "model": "yuzukotoalchemy:circle_structure_tier1"},
+        "active=off,tier=tier2": { "model": "yuzukotoalchemy:circle_structure_tier2"},
+        "active=off,tier=tier3": { "model": "yuzukotoalchemy:circle_structure_tier3"},
+        "active=on,tier=tier1": { "model": "yuzukotoalchemy:circle_structure_on_tier1"},
+        "active=on,tier=tier2": { "model": "yuzukotoalchemy:circle_structure_on_tier2"},
+        "active=on,tier=tier3": { "model": "yuzukotoalchemy:circle_structure_on_tier3"}
+    }
+}

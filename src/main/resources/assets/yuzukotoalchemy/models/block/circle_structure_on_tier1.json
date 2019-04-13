@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "yuzukotoalchemy:blocks/circle_structure_tier1",
+        "down": "yuzukotoalchemy:blocks/circle_structure_tier1",
+        "up": "yuzukotoalchemy:blocks/circle_structure_top",
+        "north": "yuzukotoalchemy:blocks/circle_structure_tier1",
+        "east": "yuzukotoalchemy:blocks/circle_structure_tier1",
+        "south": "yuzukotoalchemy:blocks/circle_structure_tier1",
+        "west": "yuzukotoalchemy:blocks/circle_structure_tier1"
+    }
+}
