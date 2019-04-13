@@ -3,6 +3,7 @@ package firis.yuzukotoalchemy.common.block;
 import firis.yuzukotoalchemy.YuzuKotoAlchemy;
 import firis.yuzukotoalchemy.common.tileentity.YKTileYuzuKotoCatalyst;
 import firis.yuzukotoalchemy.common.tileentity.YKTileYuzuKotoCatalyst.CircleTier;
+import moze_intel.projecte.api.PESounds;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,6 +14,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
@@ -68,6 +70,9 @@ public class YKBlockYuzuKotoCatalyst extends BlockContainer {
 			
 			if (catalyst.getCircleTier() == CircleTier.NONE) {
 				if (catalyst.activateCatalyst(stack)) {
+					//音を鳴らす
+					worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, 
+							PESounds.CHARGE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 					return true;
 				}
 			} else if (worldIn.isRemote){
