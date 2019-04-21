@@ -1,11 +1,11 @@
 [
 {
-  "modid": "yuzukizualchemry",
-  "name": "YuzuKizu Alchemy",
+  "modid": "yuzukotoalchemy",
+  "name": "YuzuKoto Alchemy",
   "description": "ProjectE addon mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https://github.com/firis-games/YuzuKizuAlchemy",
+  "url": "https://github.com/firis-games/YuzuKotoAlchemy",
   "updateUrl": "",
   "authorList": ["Yuzuki Yukari", "Kotonoha Akane", "Kotonoha Aoi", "Kizuna Akari", "firis-games"],
   "credits": "",
