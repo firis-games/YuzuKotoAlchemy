@@ -3,6 +3,7 @@ package firis.yuzukotoalchemy.common.event;
 import java.util.ArrayList;
 import java.util.List;
 
+import firis.yuzukotoalchemy.common.YKConfig;
 import moze_intel.projecte.api.ProjectEAPI;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
@@ -46,6 +47,9 @@ public class AlchemicalBagEventHandler {
 	@SubscribeEvent
 	public static void onPlayerInteractEventRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 	
+		//falseの場合は何もしない
+		if (!YKConfig.ALCHEMICAL_BAG_MOVE_CHEST) return;
+		
 		EntityPlayer player = event.getEntityPlayer();
 		
 		//スニーク判定
@@ -105,6 +109,9 @@ public class AlchemicalBagEventHandler {
 	 */
 	@SubscribeEvent
 	public static void onEntityItemPickupEvent(EntityItemPickupEvent event) {
+		
+		//falseの場合は何もしない
+		if (!YKConfig.ALCHEMICAL_BAG_AUTO_COLLECT) return;
 		
 		EntityPlayer player = event.getEntityPlayer();
 		if (player == null) return;
