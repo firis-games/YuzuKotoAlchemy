@@ -1,0 +1,19 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"xxx",
+		"xyx",
+		"xxx"
+	],
+	"key": {
+		"x": {
+			"item": "minecraft:dragon_egg"
+		},
+		"y": {
+			"item": "projecte:item.pe_philosophers_stone"
+		}
+	},
+	"result": {
+		"item": "yuzukotoalchemy:yuzukoto_catalyst"
+	}
+}
