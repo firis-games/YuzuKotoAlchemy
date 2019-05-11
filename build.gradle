@@ -62,7 +62,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
     compile "mezz.jei:jei_1.12.2:4.10.0.198"
     compile group: "org.apache.commons", name: "commons-math3", version: "3.6.1"
-	compile fileTree(dir: 'D:/MinecraftMod/ProjectE-1.12.2-PE1.4.0/build/libs', include: '*-dev.jar')
+	compile fileTree(dir: 'D:/MinecraftMod/ProjectE-1.12.2-PE1.4.1/build/libs', include: '*.jar')
 }
 
 processResources {

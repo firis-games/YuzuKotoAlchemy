@@ -21,8 +21,8 @@ public class YKItemAkariStar extends Item implements IItemEmc {
 	/**
 	 * 最大EMC
 	 */
-	protected double starMaxEmc = 0;
-	protected double getStarMaxEmc() {
+	protected long starMaxEmc = 0;
+	protected long getStarMaxEmc() {
 		return this.starMaxEmc;
 	}
 	
@@ -64,39 +64,38 @@ public class YKItemAkariStar extends Item implements IItemEmc {
 	/** @IItemEmc */
 	/**********************************************************************/
 	@Override
-	public double addEmc(ItemStack stack, double toAdd) {
-		double add = Math.min(getMaximumEmc(stack) - getStoredEmc(stack), toAdd);
+	public long addEmc(ItemStack stack, long toAdd) {
+		long add = Math.min(getMaximumEmc(stack) - getStoredEmc(stack), toAdd);
 		this.addEmcToStack(stack, add);
 		return add;
 	}
 
 	@Override
-	public double extractEmc(ItemStack stack, double toRemove) {
-		double sub = Math.min(getStoredEmc(stack), toRemove);
+	public long extractEmc(ItemStack stack, long toRemove) {
+		long sub = Math.min(getStoredEmc(stack), toRemove);
 		this.removeEmc(stack, sub);
 		return sub;
 	}
 
 	@Override
-	public double getStoredEmc(ItemStack stack) {
+	public long getStoredEmc(ItemStack stack) {
 		return this.getEmc(stack);
 	}
 
 	@Override
-	public double getMaximumEmc(ItemStack stack) {
+	public long getMaximumEmc(ItemStack stack) {
 		return this.getStarMaxEmc();
 	}
-	
 	
 	/** staticメソッド */
 	/**********************************************************************/
 	
-	public double getEmc(ItemStack stack)
+	public long getEmc(ItemStack stack)
 	{
 		if (!stack.hasTagCompound()) {
         	stack.setTagCompound(new NBTTagCompound());
 		}
-		return stack.getTagCompound().getDouble("StoredEMC");
+		return stack.getTagCompound().getLong("StoredEMC");
 	}
 	
 	public void removeEmc(ItemStack stack, double amount)
@@ -122,6 +121,5 @@ public class YKItemAkariStar extends Item implements IItemEmc {
 	public void addEmcToStack(ItemStack stack, double amount)
 	{
 		this.setEmc(stack, getEmc(stack) + amount);
-	}
-		
+	}		
 }

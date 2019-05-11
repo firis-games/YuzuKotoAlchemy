@@ -24,12 +24,12 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 	 *
 	 */
 	public static enum CircleTier {
-		TIER3(3, 3, 50000000f, 1.5f),
-		TIER2(2, 2, 10000000f, 1.2f),
-		TIER1(1, 1, 1000000f, 1f),
+		TIER3(3, 3, 50000000L, 1.5f),
+		TIER2(2, 2, 10000000L, 1.2f),
+		TIER1(1, 1, 1000000L, 1f),
 		NONE(0, 0, 0, 0);
 		
-		private CircleTier(int tier, int range, double cost, double boosts) {
+		private CircleTier(int tier, int range, long cost, double boosts) {
 			this.tier = tier;
 			this.range = range;
 			this.cost = cost;
@@ -37,7 +37,7 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 		}
 		private int tier;
 		private int range;
-		private double cost;
+		private long cost;
 		private double boosts;
 		public int getTier() {
 			return this.tier;
@@ -45,7 +45,7 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 		public int getRange() {
 			return this.range;
 		}
-		public double getCost() {
+		public long getCost() {
 			return this.cost;
 		}
 		public double getBoosts() {
@@ -72,13 +72,19 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 	}
 	
 	/**
-	 * 練成陣の生成EMC
+	 * 1sあたりの練成陣の生成EMC
 	 */
-	protected double genEmc = 0;
-	public double getGenEmc() {
+	protected long genEmc = 0;
+	public long getGenEmc() {
 		return this.genEmc;
 	}
-	
+	/**
+	 * 1tickあたりのEMC生成
+	 * @return
+	 */
+	public long getTickGenEmc() {
+		return (long) ((double)this.genEmc / 20f);
+	}
 	
 	@Override
 	public void update() {
@@ -100,7 +106,7 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 			
 			IEmcAcceptor emcAcceptor = (IEmcAcceptor) tile;
 			//1tickあたりのEMCを加算
-			emcAcceptor.acceptEMC(EnumFacing.DOWN, this.getGenEmc() / 20F);
+			emcAcceptor.acceptEMC(EnumFacing.DOWN, this.getTickGenEmc());
 			
 		}
 	}
@@ -164,7 +170,7 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 				//練成陣をActive化
 				this.circleTier = actCircleTier;
 				
-				this.genEmc = circleEmc * this.circleTier.getBoosts();
+				this.genEmc = (long)(circleEmc * this.circleTier.getBoosts());
 				
 				//ブロックを変換
 				this.replaceCicleStructure(actCircleTier, true);
@@ -272,7 +278,7 @@ public class YKTileYuzuKotoCatalyst extends TileEntity implements ITickable {
 		super.readFromNBT(compound);
 		
 		this.circleTier = CircleTier.getCircleTier(compound.getInteger("circleTier"));
-		this.genEmc = compound.getDouble("genEmc");
+		this.genEmc = compound.getLong("genEmc");
 
     }
 	
